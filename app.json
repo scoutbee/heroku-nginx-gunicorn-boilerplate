@@ -1,0 +1,26 @@
+{
+    "buildpacks": [
+        {
+            "url": "https://github.com/negativetwelve/heroku-buildpack-subdir"
+        }
+    ],
+    "addons": [
+        "heroku-postgresql:hobby-dev"
+    ],
+    "env": {
+        "DJANGO_SECRET_KEY": {
+            "description": "A secret key for verifying the integrity of signed cookies.",
+            "generator": "secret"
+        },
+        "DJANGO_SETTINGS_MODULE": {
+            "description": "Django configuration file",
+            "value": "wueww.settings"
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "hobby"
+        }
+    }
+}
